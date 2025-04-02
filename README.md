@@ -1,2 +1,4 @@
 # GROUP-1
 YIELD LOSS PREDICTOR
+
+Climate variability, such as unexpected droughts, unseasonal rainfall, and heatwaves, has a significant impact on agricultural productivity, especially in regions heavily dependent on crop yields like Odisha. This project leverages machine learning techniques, including Long Short-Term Memory (LSTM) networks and Random Forest, to predict crop yield losses due to extreme climate variability. The system uses weather data from the Indian Meteorological Department (IMD) and other climate sources to train predictive models that forecast potential losses based on historical trends. These predictions are evaluated using metrics like Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R². This system aims to provide actionable insights to farmers by offering real-time alerts and visualizations, helping them take timely measures to mitigate the risks posed by climate fluctuations.
