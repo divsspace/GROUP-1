@@ -46,36 +46,26 @@ study of the same.
 
 The evaluation metrics were derived from the scikit-learn metrics module. The Mean Absolute Error (MAE) is calculated as:  
 
-$$
-MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y_i}|
-$$  
+**MAE** = (1/n) * Σ |yᵢ - ŷᵢ|  
 
-where \( y_i \) represents the actual yield value and \( \hat{y_i} \) represents the predicted yield value.  
+where `yᵢ` represents the actual yield value and `ŷᵢ` represents the predicted yield value.  
 
 The Root Mean Square Error (RMSE) is computed as:  
 
-$$
-RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y_i})^2}
-$$  
+**RMSE** = sqrt((1/n) * Σ (yᵢ - ŷᵢ)²)  
 
-The coefficient of determination (\( R^2 \)) quantifies the proportion of variance explained by the model:  
+The coefficient of determination (**R²**) quantifies the proportion of variance explained by the model:  
 
-$$
-R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y_i})^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
-$$  
+**R²** = 1 - (Σ (yᵢ - ŷᵢ)²) / (Σ (yᵢ - ȳ)²)  
 
-where \( \bar{y} \) is the mean of the observed values.  
+where `ȳ` is the mean of the observed values.  
 
 Model accuracy is expressed as a percentage using:  
 
-$$
-\text{Accuracy} (\%) = \left( 1 - \frac{MAE}{\bar{y}} \right) \times 100
-$$  
+**Accuracy (%)** = (1 - (MAE / ȳ)) × 100  
 
 Additionally, the Mean Absolute Percentage Error (MAPE) provides a scale-independent error metric:  
 
-$$
-MAPE = \frac{100}{n} \sum_{i=1}^{n} \frac{|y_i - \hat{y_i}|}{y_i}
-$$  
+**MAPE** = (100/n) * Σ |(yᵢ - ŷᵢ) / yᵢ|  
 
 These metrics were implemented using NumPy operations and scikit-learn’s metrics module, providing a comprehensive assessment of model performance across different scales and interpretations.
