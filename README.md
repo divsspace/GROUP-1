@@ -69,7 +69,7 @@ where \( \bar{y} \) is the mean of the observed values.
 Model accuracy is expressed as a percentage using:  
 
 $$
-\text{Accuracy}(\%) = \left(1 - \frac{MAE}{\bar{y}}\right) \times 100
+\text{Accuracy} (\%) = \left( 1 - \frac{MAE}{\bar{y}} \right) \times 100
 $$  
 
 Additionally, the Mean Absolute Percentage Error (MAPE) provides a scale-independent error metric:  
