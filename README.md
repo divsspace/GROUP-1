@@ -44,50 +44,38 @@ of weather and agricultural data through a parallel model
 implementation, as well as a comprehensive and comparative
 study of the same.
 
-The evaluation metrics were derived from the scikit-learn metrics
-module. The Mean Absolute Error (MAE) is calculated as:
-M AE = 1
-n
-nX
-i=1
-|yi − ˆyi| (3)
-where yi represents the actual yield value and ˆyi represents the
-predicted yield value. The Root Mean Square Error (RMSE)
-is computed as:
-RM SE =
-v
-u
-u
-t 1
-n
-nX
-i=1
-(yi − ˆyi)2 (4)
-The coefficient of determination (R2) quantifies the proportion
-of variance explained by the model:
-R2 = 1 −
-Pn
-i=1(yi − ˆyi)2
-Pn
-i=1(yi − ¯y)2 (5)
-where ¯y is the mean of the observed values. Model accuracy
-is expressed as a percentage using:
-Accuracy(%) =
-
-1 − M AE
-¯y
-
-× 100 (6)
-Additionally, the Mean Absolute Percentage Error (MAPE)
-provides a scale-independent error metric:
-M AP E = 100
-n
-nX
-i=1
-yi − ˆyi
-yi
-(7)
-These metrics were implemented using NumPy operations
-and scikit-learn’s metrics module, providing a comprehensive
-assessment of model performance across different scales and
-interpretations.
+The evaluation metrics were derived from the scikit-learn metrics module. The Mean Absolute Error (MAE) is calculated as:  
+
+$$
+MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y_i}|
+$$  
+
+where \( y_i \) represents the actual yield value and \( \hat{y_i} \) represents the predicted yield value.  
+
+The Root Mean Square Error (RMSE) is computed as:  
+
+$$
+RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y_i})^2}
+$$  
+
+The coefficient of determination (\( R^2 \)) quantifies the proportion of variance explained by the model:  
+
+$$
+R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y_i})^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
+$$  
+
+where \( \bar{y} \) is the mean of the observed values.  
+
+Model accuracy is expressed as a percentage using:  
+
+$$
+\text{Accuracy}(\%) = \left(1 - \frac{MAE}{\bar{y}}\right) \times 100
+$$  
+
+Additionally, the Mean Absolute Percentage Error (MAPE) provides a scale-independent error metric:  
+
+$$
+MAPE = \frac{100}{n} \sum_{i=1}^{n} \frac{|y_i - \hat{y_i}|}{y_i}
+$$  
+
+These metrics were implemented using NumPy operations and scikit-learn’s metrics module, providing a comprehensive assessment of model performance across different scales and interpretations.
